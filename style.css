@@ -130,6 +130,27 @@ body {
     cursor: text;
 }
 
+.home-img {
+    position: absolute;
+    top: 50%;
+    left: 70%;
+    opacity: 0;
+    transform: translateY(-50%);
+    height: 40vh;
+    width: 40vh;
+    border-radius: 40vh;
+    overflow-y: hidden;
+    animation: come 1.5s 3s forwards;
+}
+
+.my-img {
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 40vh;
+}
+
 .scroll {
     color: #0fc9a8;
     position: absolute;
@@ -190,7 +211,7 @@ body {
 
 .line-div1 {
     position: absolute;
-    top: 60%;
+    top: 70%;
     left:50%;
     transform: translatex(-50%);
     border-top: 0.1vh solid #0fc9a8;
