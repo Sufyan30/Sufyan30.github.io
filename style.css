@@ -388,7 +388,17 @@ body {
     }
 
     /* Body */
-    .home-img {
+    .side-img {
+        top: 27.5%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 30vh;
+        border-radius: 30vh;
+        width: 30vh;
+        overflow: hidden;
+    }
+
+    .side-img2 {
         top: 27.5%;
         left: 50%;
         transform: translate(-50%, -50%);
