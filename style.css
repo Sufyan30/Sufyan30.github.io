@@ -1,7 +1,7 @@
 /* Importing the font.*/
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
-/* The hex value of the main color is: #0fc9a8 */
+/* The hex value of the main color is: #00bfe8 */
 
 /* Entire Html */
 
@@ -28,15 +28,15 @@
    
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: #0fc9a8;
-    background: linear-gradient(180deg, rgba(15,201,168,1) 34%, rgba(10,130,121,1) 74%);
+    background: #00bfe8;
+    background: linear-gradient(180deg, #00bfe8 34%, #89fff1 74%);
     width: 1.1vh;
     border-radius: 10px;
 }
   
   /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: #0fc9a8; 
+    background: #00bfe8; 
 }
 
 /* Start-up Animation */
@@ -99,7 +99,7 @@ body {
 }
 
 .defcolor {
-    color: #0fc9a8;
+    color: #00bfe8;
 }
 
 .home-container, .work-with-me {
@@ -110,8 +110,6 @@ body {
     z-index: 1;
     position: fixed;
     margin: 2%;
-    width: 6vh;
-    height: 6vh;
     opacity: 0;
     animation: come 1s 3s forwards;
     background: transparent;
@@ -165,7 +163,7 @@ body {
 }
 
 .scroll {
-    color: #0fc9a8;
+    color: #00bfe8;
     position: absolute;
     font-size: 3vh;
     top: 85%;
@@ -203,7 +201,7 @@ body {
 }
 
 .design-text {
-    color: #0fc9a8;
+    color: #00bfe8;
 }
 
 .my-work {
@@ -225,7 +223,7 @@ body {
     top: 70%;
     left:50%;
     transform: translatex(-50%);
-    border-top: 0.1vh solid #0fc9a8;
+    border-top: 0.1vh solid #00bfe8;
     width: 0vh;
     animation: width-draw 2s 4s forwards, line-breathe 3s 6s infinite;
 }
@@ -246,7 +244,7 @@ body {
         border-color: transparent;
     }
     50% {
-        border-color: #0fc9a8;
+        border-color: #00bfe8;
     }
 }
 
@@ -275,7 +273,7 @@ body {
     }
     100% {
         background-color: white;
-        color: #0fc9a8;
+        color: #00bfe8;
         letter-spacing: 0.3vh;
         font-weight: bold;
         padding-left: 0.4vh;
@@ -286,7 +284,7 @@ body {
 @keyframes undesigntxt {
     0% {
         background-color: white;
-        color: #0fc9a8;
+        color: #00bfe8;
         letter-spacing: 0.3vh;
         font-weight: bold;
         padding-left: 0.4vh;
@@ -377,20 +375,60 @@ body {
 
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (orientation: portrait){
+    /* Animations */
+
+    @keyframes typing {
+        from {
+            width: 0vh;
+        }
+        to {
+            width: 32vh;
+        }
+    }
+
+    @keyframes width-draw {
+        from {
+            width: 0vh;
+        }
+        to {
+            width: 30vh;
+        }
+    }
+    
+    @keyframes line-breathe {
+        from, to {
+            width: 30vh;
+        }
+        50% {
+            width: 26vh;
+        }
+    }
 
     /* Navigation bar */
+
+    .logo {
+        font-size: 3vh;
+        margin-left: 5%;
+    }
+
+    .navigation-bar {
+        font-size: 2vh;
+        margin-right: 10%;
+        margin-top: 4%;
+    }
 
     /* Headings */
     .heytype, .work{
         top: 50%;
         left: 50%;
+        font-size: 4vh;
         transform: translate(-50%, -50%);
     }
 
     /* Body */
     .side-img {
-        top: 27.5%;
+        top: 30%;
         left: 50%;
         transform: translate(-50%, -50%);
         height: 30vh;
@@ -416,12 +454,18 @@ body {
     .start-div, .my-work{
         top: 55%;
         left: 50%;
+        font-size: 1.5vh;
+        line-height: 3vh;
         transform: translateX(-50%);
-        text-align: center;
-        width: 65vh;
+        text-align:start ;
+        width: 30vh;
     }
 
     .line-div1 {
         top: 75%;
+    }
+
+    .scroll {
+        top: 80%;
     }
 }
