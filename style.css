@@ -13,6 +13,10 @@
     scroll-behavior: smooth;
 }
 
+.design-text {
+    color: #00bfe8;
+}
+
 /* Scroll Bar*/
 
 /* width */
@@ -44,7 +48,7 @@
 .heytype {
     position: absolute;
     top: 30%;
-    left: 30%;
+    left: 15%;
     font-size: 6vh;
     transform: translateY(-50%);
     overflow: hidden;
@@ -121,7 +125,7 @@ body {
 .start-div {
     position: absolute;
     top: 40%;
-    left: 30%;
+    left: 15%;
     line-height: 4vh;
     font-size: 2.5vh;
     opacity: 0;
@@ -195,13 +199,9 @@ body {
 .work {
     position: absolute;
     top: 30%;
-    left: 30%;
+    left: 15%;
     font-size: 6vh;
     width: fit-content;
-}
-
-.design-text {
-    color: #00bfe8;
 }
 
 .my-work {
@@ -328,33 +328,6 @@ body {
 
 @media only screen and (max-width: 1600px) {
 
-    /* Headings */ 
-    .heytype {
-        left: 15%;
-    }
-
-    .work {
-        left: 15%;
-    }
-
-    /* Navigation Bar*/
-    ul li {
-        padding-left: 1%;
-    }
-    
-    /* Body */
-    .start-div {
-        left: 15%;
-    }
-
-    .lets-work {
-        left: 15%;
-    }
-
-}
-
-@media only screen and (max-width: 1080px) {
-
     /* Headings */
     .heytype {
         left: 5%;
@@ -375,7 +348,7 @@ body {
 
 }
 
-@media only screen and (orientation: portrait){
+@media only screen and (max-width: 900px) {
     /* Animations */
 
     @keyframes typing {
@@ -466,6 +439,101 @@ body {
     }
 
     .scroll {
-        top: 80%;
+        top: 80%; 
+    }
+}
+
+@media only screen and (orientation: portrait) {
+    /* Animations */
+
+    @keyframes typing {
+        from {
+            width: 0vh;
+        }
+        to {
+            width: 32vh;
+        }
+    }
+
+    @keyframes width-draw {
+        from {
+            width: 0vh;
+        }
+        to {
+            width: 30vh;
+        }
+    }
+    
+    @keyframes line-breathe {
+        from, to {
+            width: 30vh;
+        }
+        50% {
+            width: 26vh;
+        }
+    }
+
+    /* Navigation bar */
+
+    .logo {
+        font-size: 3vh;
+        margin-left: 5%;
+    }
+
+    .navigation-bar {
+        font-size: 2vh;
+        margin-right: 10%;
+        margin-top: 4%;
+    }
+
+    /* Headings */
+    .heytype, .work{
+        top: 50%;
+        left: 50%;
+        font-size: 4vh;
+        transform: translate(-50%, -50%);
+    }
+
+    /* Body */
+    .side-img {
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 30vh;
+        border-radius: 30vh;
+        width: 30vh;
+        overflow: hidden;
+    }
+
+    .side-img2 {
+        top: 27.5%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 30vh;
+        width: 30vh;
+        overflow: hidden;
+    }
+
+    .my-img {
+        height: 30vh;
+        width: 30vh;
+    }
+
+    .start-div, .my-work{
+        top: 55%;
+        left: 50%;
+        font-size: 1.5vh;
+        line-height: 3vh;
+        transform: translateX(-50%);
+        text-align:start ;
+        width: 30vh;
+    }
+
+    .line-div1 {
+        top: 75%;
+    }
+
+    .scroll {
+        top: 80%; 
     }
 }
