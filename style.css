@@ -69,18 +69,16 @@
 .navigation-bar {
     z-index: 1;
     position: fixed;
-    margin: 2%;
-    margin-right: 4%;
-    right: 0%;
+    top: 50%;
+    left: 3%;
+    transform: translateY(-50%);
     width: auto;
-    font-size: 2.5vh;
-    white-space: nowrap;
+    animation: come 1s 3s forwards;
 }
 
 ul li {
     opacity: 0;
     display: inline-block;
-    margin-left: 5%;
     animation: come 1s 3s forwards;
     background: transparent;
     border-radius: 3vh;
@@ -92,12 +90,13 @@ a {
     border-radius: 1vh;
 }
 
-.logo {
-    position: absolute;
-    margin: 4vh;
-    height: 6vh;
-    opacity: 0;
-    animation: come 1s 3s forwards;
+nav img {
+    height: 5vh;
+    padding-left: 5vh;
+}
+
+nav img:hover, .logo:hover {
+    filter: brightness(80%);
 }
 
 /* Body */
@@ -388,19 +387,6 @@ body {
         }
     }
 
-    /* Navigation bar */
-
-    .logo {
-        font-size: 3vh;
-        margin-left: 5%;
-    }
-
-    .navigation-bar {
-        font-size: 2vh;
-        margin-right: 10%;
-        margin-top: 4%;
-    }
-
     /* Headings */
     .heytype, .work, .projects{
         top: 50%;
@@ -481,19 +467,6 @@ body {
         50% {
             width: 26vh;
         }
-    }
-
-    /* Navigation bar */
-
-    .logo {
-        font-size: 3vh;
-        margin-left: 5%;
-    }
-
-    .navigation-bar {
-        font-size: 2vh;
-        margin-right: 10%;
-        margin-top: 4%;
     }
 
     /* Headings */
