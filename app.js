@@ -36,3 +36,9 @@ function hover5() {
 function unhover5() {
     document.getElementById('javaisbad5').style.animation='undesigntxt 0.35s forwards';
 };
+function hover6() {
+    document.getElementById('javaisbad6').style.animation='designtxt 0.35s forwards';
+};
+function unhover6() {
+    document.getElementById('javaisbad6').style.animation='undesigntxt 0.35s forwards';
+};

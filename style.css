@@ -14,7 +14,10 @@
 }
 
 .design-text {
-    color: #00bfe8;
+    background: linear-gradient(145deg, rgba(1,239,211,1) 0%, rgba(0,172,230,1) 68%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 /* Scroll Bar*/
@@ -47,10 +50,10 @@
 
 .heytype {
     position: absolute;
-    top: 30%;
-    left: 15%;
+    top: 50%;
+    left: 50%;
     font-size: 6vh;
-    transform: translateY(-50%);
+    transform: translateX(-50%);
     overflow: hidden;
     white-space: nowrap;
     border-right: 0.1vh solid;
@@ -81,12 +84,20 @@ ul li {
     animation: come 1s 3s forwards;
     background: transparent;
     border-radius: 3vh;
-    backdrop-filter: blur(0.2rem);
 }
 
 a {
-    color: white;
+    color: #ffffff;
     text-decoration: none;
+    border-radius: 1vh;
+}
+
+.logo {
+    position: absolute;
+    margin: 4vh;
+    height: 6vh;
+    opacity: 0;
+    animation: come 1s 3s forwards;
 }
 
 /* Body */
@@ -94,7 +105,7 @@ a {
 body {
     width: 100%;
     height: 100%;
-    color: white;
+    color: rgb(255, 255, 255);
     background-color: rgb(30, 30, 30);
     font-family: 'Poppins', sans-serif;
     font-size: 22px;
@@ -102,58 +113,43 @@ body {
     scroll-snap-type: y mandatory;
 }
 
-.defcolor {
-    color: #00bfe8;
-}
-
-.home-container, .work-with-me {
+.home-page, .work-page, .project-page {
     scroll-snap-align: top;
-}
-
-.logo {
-    z-index: 1;
-    position: fixed;
-    margin: 2%;
-    opacity: 0;
-    animation: come 1s 3s forwards;
-    background: transparent;
-    border-radius: 3vh;
-    backdrop-filter: blur(0.2rem);
-    font-size: 4vh;
 }
 
 .start-div {
     position: absolute;
-    top: 40%;
-    left: 15%;
+    top: 65%;
+    left: 50%;
+    transform: translateX(-50%);
     line-height: 4vh;
     font-size: 2.5vh;
     opacity: 0;
     animation: come 1.5s 3s forwards;
     cursor: text;
+    text-align: center;
 }
 
 .side-img {
     position: absolute;
-    top: 40%;
-    left: 70%;
-    opacity: 0;
-    transform: translateY(-50%);
-    height: 40vh;
-    width: 40vh;
-    border-radius: 40vh;
-    overflow-y: hidden;
-    animation: come 1.5s 3s forwards;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 30vh;
+    width: 30vh;
+    border-radius: 30vh;
+    overflow: hidden;
+    animation: come 1s forwards;
+    box-shadow: 0 0 10vh #53dfff4d;
 }
 
 .side-img2 {
     position: absolute;
-    top: 40%;
-    left: 70%;
-    opacity: 0;
-    transform: translateY(-50%);
-    height: 40vh;
-    width: 40vh;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 30vh;
+    width: 30vh;
     overflow-y: hidden;
     animation: come 1.5s 3s forwards;
 }
@@ -163,7 +159,7 @@ body {
     bottom: 0%;
     left: 50%;
     transform: translateX(-50%);
-    height: 40vh;
+    height: 30vh;
 }
 
 .scroll {
@@ -187,7 +183,7 @@ body {
     animation: come 1s 3s forwards, arrow-down 2s infinite;
 }
 
-.work-with-me {
+.work-page {
     opacity: 0;
     position: absolute;
     width: 100%;
@@ -198,21 +194,55 @@ body {
 
 .work {
     position: absolute;
-    top: 30%;
-    left: 15%;
+    top: 50%;
+    left: 50%;
     font-size: 6vh;
+    transform: translateX(-50%);
     width: fit-content;
 }
 
 .my-work {
     position: absolute;
-    top: 45%;
-    left: 15%;
+    top: 65%;
+    left: 50%;
+    transform: translateX(-50%);
     line-height: 4vh;
     font-size: 2.5vh;
     opacity: 0;
     animation: come 1.5s 3s forwards;
     cursor: text;
+    text-align: center;
+}
+
+.project-page {
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 200%;
+    animation: come 1s 3s forwards;
+}
+
+.projects {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 6vh;
+    transform: translateX(-50%);
+    width: fit-content;
+}
+
+.project-show {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translateX(-50%);
+    line-height: 4vh;
+    font-size: 2.5vh;
+    opacity: 0;
+    animation: come 1.5s 3s forwards;
+    cursor: text;
+    text-align: center;
 }
 
 
@@ -220,7 +250,7 @@ body {
 
 .line-div1 {
     position: absolute;
-    top: 70%;
+    top: 80%;
     left:50%;
     transform: translatex(-50%);
     border-top: 0.1vh solid #00bfe8;
@@ -268,14 +298,17 @@ body {
 
 @keyframes designtxt {
     0% {
-        background-color: transparent;
+        background: linear-gradient(145deg, rgba(1,239,211,1) 0%, rgba(0,172,230,1) 68%);
+        background-clip: text;
+        -webkit-background-clip: text;
         letter-spacing: 0vh;
     }
     100% {
-        background-color: white;
-        color: #00bfe8;
+        background: linear-gradient(145deg, rgba(1,239,211,1) 0%, rgba(0,172,230,1) 68%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
         letter-spacing: 0.3vh;
-        font-weight: bold;
         padding-left: 0.4vh;
         padding-right: 0.4vh;
     }
@@ -283,7 +316,6 @@ body {
 
 @keyframes undesigntxt {
     0% {
-        background-color: white;
         color: #00bfe8;
         letter-spacing: 0.3vh;
         font-weight: bold;
@@ -326,29 +358,7 @@ body {
 
 /* Media queries*/
 
-@media only screen and (max-width: 1600px) {
-
-    /* Headings */
-    .heytype {
-        left: 5%;
-    }
-
-    .work {
-        left: 5%;
-    }
-
-    /* Body */
-    .start-div {
-        left: 5%;
-    }
-
-    .lets-work {
-        left: 5%;
-    }
-
-}
-
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1100px) {
     /* Animations */
 
     @keyframes typing {
@@ -392,7 +402,7 @@ body {
     }
 
     /* Headings */
-    .heytype, .work{
+    .heytype, .work, .projects{
         top: 50%;
         left: 50%;
         font-size: 4vh;
@@ -410,7 +420,7 @@ body {
         overflow: hidden;
     }
 
-    .side-img2 {
+    .side-img2, .side-img3 {
         top: 27.5%;
         left: 50%;
         transform: translate(-50%, -50%);
@@ -424,7 +434,7 @@ body {
         width: 30vh;
     }
 
-    .start-div, .my-work{
+    .start-div, .my-work, .project-show{
         top: 55%;
         left: 50%;
         font-size: 1.5vh;
@@ -487,7 +497,7 @@ body {
     }
 
     /* Headings */
-    .heytype, .work{
+    .heytype, .work, .projects{
         top: 50%;
         left: 50%;
         font-size: 4vh;
@@ -505,7 +515,7 @@ body {
         overflow: hidden;
     }
 
-    .side-img2 {
+    .side-img2, .side-img3 {
         top: 27.5%;
         left: 50%;
         transform: translate(-50%, -50%);
@@ -519,7 +529,7 @@ body {
         width: 30vh;
     }
 
-    .start-div, .my-work{
+    .start-div, .my-work, .project-show{
         top: 55%;
         left: 50%;
         font-size: 1.5vh;
