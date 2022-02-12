@@ -1,50 +1,63 @@
 /* Importing the font.*/
-@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=Josefin+Sans&family=Poppins&display=swap');
 
 /* The hex value of the main color is: #00bfe8 */
 
+
 /* Entire Html */
 
-*{
+* {
     user-select: none;
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
+    cursor: url("https://media.discordapp.net/attachments/759730675447758862/939154463602638888/unknown.png"), auto;
 }
 
 .design-text {
-    background: linear-gradient(145deg, rgba(1,239,211,1) 0%, rgba(0,172,230,1) 68%);
+    background: linear-gradient(145deg, rgba(1, 239, 211, 1) 0%, rgba(0, 172, 230, 1) 68%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
+
 /* Scroll Bar*/
 
+
 /* width */
+
 ::-webkit-scrollbar {
     width: 0.9vh;
-  }
-  
+}
+
+
 /* Track */
+
 ::-webkit-scrollbar-track {
-    background: black;
+    background: rgba(0, 0, 0, 0);
     border-radius: 10px;
-  }
-   
+}
+
+
 /* Handle */
+
 ::-webkit-scrollbar-thumb {
     background: #00bfe8;
     background: linear-gradient(180deg, #00bfe8 34%, #89fff1 74%);
     width: 1.1vh;
     border-radius: 10px;
 }
-  
-  /* Handle on hover */
+
+
+/* Handle on hover */
+
 ::-webkit-scrollbar-thumb:hover {
-    background: #00bfe8; 
+    background: #00bfe8;
 }
+
 
 /* Start-up Animation */
 
@@ -59,10 +72,11 @@
     border-right: 0.1vh solid;
     padding-right: 5px;
     letter-spacing: 0em;
-    animation: typing 3s steps(40, end),
-    cursor 0.65s infinite;
+    animation: typing 3s steps(40, end), cursor 0.65s infinite;
     user-select: none;
+    font-family: 'Poppins', sans-serif;
 }
+
 
 /* Navigation Bar*/
 
@@ -71,14 +85,14 @@
     position: fixed;
     top: 50%;
     left: 3%;
+    opacity: 0;
     transform: translateY(-50%);
-    width: auto;
     animation: come 1s 3s forwards;
 }
 
 ul li {
     opacity: 0;
-    display: inline-block;
+    display: block;
     animation: come 1s 3s forwards;
     background: transparent;
     border-radius: 3vh;
@@ -92,12 +106,12 @@ a {
 
 nav img {
     height: 5vh;
-    padding-left: 5vh;
 }
 
-nav img:hover, .logo:hover {
+nav img:hover {
     filter: brightness(80%);
 }
+
 
 /* Body */
 
@@ -105,15 +119,18 @@ body {
     width: 100%;
     height: 100%;
     color: rgb(255, 255, 255);
-    background-color: rgb(30, 30, 30);
+    background-color: #1f1f1f;
     font-family: 'Poppins', sans-serif;
     font-size: 22px;
     scroll-behavior: smooth;
     scroll-snap-type: y mandatory;
 }
 
-.home-page, .work-page, .project-page {
+.home-page,
+.work-page,
+.project-page {
     scroll-snap-align: top;
+    font-family: 'IBM Plex Mono', monospace;
 }
 
 .start-div {
@@ -125,7 +142,6 @@ body {
     font-size: 2.5vh;
     opacity: 0;
     animation: come 1.5s 3s forwards;
-    cursor: text;
     text-align: center;
 }
 
@@ -138,7 +154,7 @@ body {
     width: 30vh;
     border-radius: 30vh;
     overflow: hidden;
-    animation: come 1s forwards;
+    animation: come 1s forwards, shadow-breathe 2.5s infinite;
     box-shadow: 0 0 10vh #53dfff4d;
 }
 
@@ -198,6 +214,7 @@ body {
     font-size: 6vh;
     transform: translateX(-50%);
     width: fit-content;
+    font-family: 'Poppins', sans-serif;
 }
 
 .my-work {
@@ -209,7 +226,6 @@ body {
     font-size: 2.5vh;
     opacity: 0;
     animation: come 1.5s 3s forwards;
-    cursor: text;
     text-align: center;
 }
 
@@ -229,18 +245,56 @@ body {
     font-size: 6vh;
     transform: translateX(-50%);
     width: fit-content;
+    font-family: 'Poppins', sans-serif;
 }
 
 .project-show {
     position: absolute;
     top: 65%;
     left: 50%;
+    display: grid;
     transform: translateX(-50%);
     line-height: 4vh;
     font-size: 2.5vh;
     opacity: 0;
     animation: come 1.5s 3s forwards;
-    cursor: text;
+    text-align: center;
+    grid-template-columns: 50vh 50vh;
+    grid-template-rows: 30vh 30vh;
+    column-gap: 10vh;
+    row-gap: 10vh;
+    grid-template-areas: "project1 project2";
+}
+
+.proj-div {
+    border-radius: 5vh;
+    width: 50vh;
+    background-size: cover;
+    background-image: url("https://media.discordapp.net/attachments/759730675447758862/939159082533814272/unknown.png");
+    grid-area: project1;
+}
+
+.content {
+    display: none;
+    padding: 7vh;
+    text-align: center;
+}
+
+.proj-div:hover {
+    background: #191819;
+}
+
+.proj-div:hover .content {
+    display: block;
+}
+
+.proj-div2 {
+    border-radius: 5vh;
+    width: 50vh;
+    background-color: #191819;
+    background-size: cover;
+    grid-area: project2;
+    padding: 10vh;
     text-align: center;
 }
 
@@ -250,12 +304,23 @@ body {
 .line-div1 {
     position: absolute;
     top: 80%;
-    left:50%;
+    left: 50%;
     transform: translatex(-50%);
     border-top: 0.1vh solid #00bfe8;
     width: 0vh;
     animation: width-draw 2s 4s forwards, line-breathe 3s 6s infinite;
 }
+
+.line-div2 {
+    position: absolute;
+    top: 110%;
+    left: 50%;
+    transform: translatex(-50%);
+    border-top: 0.1vh solid #00bfe8;
+    width: 0vh;
+    animation: width-draw 2s 4s forwards, line-breathe 3s 6s infinite;
+}
+
 
 /* Animations */
 
@@ -269,7 +334,8 @@ body {
 }
 
 @keyframes cursor {
-    from, to{
+    from,
+    to {
         border-color: transparent;
     }
     50% {
@@ -297,13 +363,13 @@ body {
 
 @keyframes designtxt {
     0% {
-        background: linear-gradient(145deg, rgba(1,239,211,1) 0%, rgba(0,172,230,1) 68%);
+        background: linear-gradient(145deg, rgba(1, 239, 211, 1) 0%, rgba(0, 172, 230, 1) 68%);
         background-clip: text;
         -webkit-background-clip: text;
         letter-spacing: 0vh;
     }
     100% {
-        background: linear-gradient(145deg, rgba(1,239,211,1) 0%, rgba(0,172,230,1) 68%);
+        background: linear-gradient(145deg, rgba(1, 239, 211, 1) 0%, rgba(0, 172, 230, 1) 68%);
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -315,21 +381,25 @@ body {
 
 @keyframes undesigntxt {
     0% {
-        color: #00bfe8;
+        background: linear-gradient(145deg, rgba(1, 239, 211, 1) 0%, rgba(0, 172, 230, 1) 68%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
         letter-spacing: 0.3vh;
-        font-weight: bold;
         padding-left: 0.4vh;
         padding-right: 0.4vh;
     }
     100% {
-        background-color: transparent;
+        background: linear-gradient(145deg, rgba(1, 239, 211, 1) 0%, rgba(0, 172, 230, 1) 68%);
+        background-clip: text;
+        -webkit-background-clip: text;
         letter-spacing: 0vh;
     }
 }
 
-
 @keyframes arrow-down {
-    0%, 100% {
+    0%,
+    100% {
         top: 89%;
     }
     50% {
@@ -347,7 +417,8 @@ body {
 }
 
 @keyframes line-breathe {
-    from, to {
+    from,
+    to {
         width: 40vh;
     }
     50% {
@@ -355,11 +426,61 @@ body {
     }
 }
 
+@keyframes shadow-breathe {
+    from,
+    to {
+        box-shadow: 0 0 10vh #53dfff4d;
+    }
+    50% {
+        box-shadow: 0 0 20vh #53dfff4d;
+    }
+}
+
+@keyframes menuopen {
+    from {
+        left: -10%;
+    }
+    to {
+        left: 0%;
+    }
+}
+
+@keyframes arrowopen {
+    from {
+        left: 0%;
+        rotate: 0deg;
+    }
+    to {
+        left: 4%;
+        rotate: 180deg;
+    }
+}
+
+@keyframes menuclose {
+    from {
+        left: 0%;
+    }
+    to {
+        left: -10%;
+    }
+}
+
+@keyframes arrowclose {
+    from {
+        left: 4%;
+        rotate: 180deg;
+    }
+    to {
+        left: 0%;
+        rotate: 0deg;
+    }
+}
+
+
 /* Media queries*/
 
 @media only screen and (max-width: 1100px) {
     /* Animations */
-
     @keyframes typing {
         from {
             width: 0vh;
@@ -368,7 +489,6 @@ body {
             width: 32vh;
         }
     }
-
     @keyframes width-draw {
         from {
             width: 0vh;
@@ -377,24 +497,36 @@ body {
             width: 30vh;
         }
     }
-    
     @keyframes line-breathe {
-        from, to {
+        from,
+        to {
             width: 30vh;
         }
         50% {
             width: 26vh;
         }
     }
-
+    /* Navigation Bar */
+    .navigation-bar {
+        left: -10%;
+        width: 6vh;
+        height: auto;
+    }
+    nav img {
+        height: 3vh;
+    }
+    nav ul {
+        padding: 1.5vh;
+    }
     /* Headings */
-    .heytype, .work, .projects{
+    .heytype,
+    .work,
+    .projects {
         top: 50%;
         left: 50%;
         font-size: 4vh;
         transform: translate(-50%, -50%);
     }
-
     /* Body */
     .side-img {
         top: 30%;
@@ -405,8 +537,8 @@ body {
         width: 30vh;
         overflow: hidden;
     }
-
-    .side-img2, .side-img3 {
+    .side-img2,
+    .side-img3 {
         top: 27.5%;
         left: 50%;
         transform: translate(-50%, -50%);
@@ -414,34 +546,47 @@ body {
         width: 30vh;
         overflow: hidden;
     }
-
     .my-img {
         height: 30vh;
         width: 30vh;
     }
-
-    .start-div, .my-work, .project-show{
+    .start-div,
+    .my-work,
+    .project-show {
         top: 55%;
         left: 50%;
-        font-size: 1.5vh;
+        font-size: 2.5vh;
         line-height: 3vh;
         transform: translateX(-50%);
-        text-align:start ;
+        text-align: start;
         width: 30vh;
     }
-
+    .project-show {
+        grid-template-areas: "project1" "project2";
+    }
+    .proj-div, .proj-div2{
+        width: 30vh;
+        height: 15vh;
+    }
+    .proj-div2 {
+        padding: 4vh;
+    }
+    .proj-div:hover .content {
+        display: none;
+    }
     .line-div1 {
         top: 75%;
     }
-
+    .line-div2 {
+        top: 130%;
+    }
     .scroll {
-        top: 80%; 
+        top: 80%;
     }
 }
 
 @media only screen and (orientation: portrait) {
     /* Animations */
-
     @keyframes typing {
         from {
             width: 0vh;
@@ -450,7 +595,6 @@ body {
             width: 32vh;
         }
     }
-
     @keyframes width-draw {
         from {
             width: 0vh;
@@ -459,24 +603,36 @@ body {
             width: 30vh;
         }
     }
-    
     @keyframes line-breathe {
-        from, to {
+        from,
+        to {
             width: 30vh;
         }
         50% {
             width: 26vh;
         }
     }
-
+    /* Navigation Bar */
+    .navigation-bar {
+        left: -10%;
+        width: 6vh;
+        height: auto;
+    }
+    nav img {
+        height: 3vh;
+    }
+    nav ul {
+        padding: 1.5vh;
+    }
     /* Headings */
-    .heytype, .work, .projects{
+    .heytype,
+    .work,
+    .projects {
         top: 50%;
         left: 50%;
         font-size: 4vh;
         transform: translate(-50%, -50%);
     }
-
     /* Body */
     .side-img {
         top: 30%;
@@ -487,8 +643,8 @@ body {
         width: 30vh;
         overflow: hidden;
     }
-
-    .side-img2, .side-img3 {
+    .side-img2,
+    .side-img3 {
         top: 27.5%;
         left: 50%;
         transform: translate(-50%, -50%);
@@ -496,27 +652,38 @@ body {
         width: 30vh;
         overflow: hidden;
     }
-
     .my-img {
         height: 30vh;
         width: 30vh;
     }
-
-    .start-div, .my-work, .project-show{
+    .start-div,
+    .my-work,
+    .project-show {
         top: 55%;
         left: 50%;
-        font-size: 1.5vh;
+        font-size: 2.5vh;
         line-height: 3vh;
         transform: translateX(-50%);
-        text-align:start ;
+        text-align: start;
         width: 30vh;
     }
-
+    .project-show {
+        grid-template-areas: "project1" "project2";
+    }
+    .proj-div, .proj-div2{
+        width: 30vh;
+        height: 15vh;
+    }
+    .proj-div2 {
+        padding: 4vh;
+    }
+    .proj-div:hover .content {
+        display: none;
+    }
     .line-div1 {
         top: 75%;
     }
-
     .scroll {
-        top: 80%; 
+        top: 80%;
     }
 }
