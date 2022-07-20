@@ -220,7 +220,7 @@ body {
     opacity: 0;
     position: absolute;
     width: 100%;
-    height: 200%;
+    height: 160%;
     top: 200%;
     animation: come 1s 3s forwards;
     background-image: url("./Images/wave-haikei.svg");
@@ -291,7 +291,7 @@ body {
 .contact-page {
     opacity: 0%;
     position: absolute;
-    top: 400%;
+    top: 360%;
     background-color: #00bfe8;
     width: 100%;
     height: 100%;
