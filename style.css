@@ -13,7 +13,7 @@
     margin: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
-    cursor: url("https://media.discordapp.net/attachments/759730675447758862/939154463602638888/unknown.png"), auto;
+    cursor: url("https://media.discordapp.net/attachments/759730675447758862/999131394229944421/unknown.png"), auto;
 }
 
 .design-text {
@@ -23,6 +23,28 @@
     -webkit-text-fill-color: transparent;
 }
 
+button {
+    font-family: 'Poppins', sans-serif;
+    border: none;
+    font-size: 6vh;
+}
+
+button:hover span {
+    display: none
+}
+  
+button:hover:before {
+    font-weight: bold;
+    content: "<alehyer/>"
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:visited{
+    color: white;
+}
 
 /* Scroll Bar*/
 
@@ -77,42 +99,6 @@
     font-family: 'Poppins', sans-serif;
 }
 
-
-/* Navigation Bar*/
-
-.navigation-bar {
-    z-index: 1;
-    position: fixed;
-    top: 50%;
-    left: 3%;
-    opacity: 0;
-    transform: translateY(-50%);
-    animation: come 1s 3s forwards;
-}
-
-ul li {
-    opacity: 0;
-    display: block;
-    animation: come 1s 3s forwards;
-    background: transparent;
-    border-radius: 3vh;
-}
-
-a {
-    color: #ffffff;
-    text-decoration: none;
-    border-radius: 1vh;
-}
-
-nav img {
-    height: 5vh;
-}
-
-nav img:hover {
-    filter: brightness(80%);
-}
-
-
 /* Body */
 
 body {
@@ -128,7 +114,8 @@ body {
 
 .home-page,
 .work-page,
-.project-page {
+.project-page,
+.contact-page {
     scroll-snap-align: top;
     font-family: 'IBM Plex Mono', monospace;
 }
@@ -166,7 +153,7 @@ body {
     height: 30vh;
     width: 30vh;
     overflow-y: hidden;
-    animation: come 1.5s 3s forwards;
+    animation: come 1s 3s forwards;
 }
 
 .my-img {
@@ -225,7 +212,7 @@ body {
     line-height: 4vh;
     font-size: 2.5vh;
     opacity: 0;
-    animation: come 1.5s 3s forwards;
+    animation: come 1s 3s forwards;
     text-align: center;
 }
 
@@ -233,14 +220,17 @@ body {
     opacity: 0;
     position: absolute;
     width: 100%;
-    height: 100%;
+    height: 200%;
     top: 200%;
     animation: come 1s 3s forwards;
+    background-image: url("./Images/wave-haikei.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .projects {
     position: absolute;
-    top: 50%;
+    top: 40%;
     left: 50%;
     font-size: 6vh;
     transform: translateX(-50%);
@@ -250,14 +240,14 @@ body {
 
 .project-show {
     position: absolute;
-    top: 65%;
+    top: 50%;
     left: 50%;
     display: grid;
     transform: translateX(-50%);
     line-height: 4vh;
     font-size: 2.5vh;
     opacity: 0;
-    animation: come 1.5s 3s forwards;
+    animation: come 1s 3s forwards;
     text-align: center;
     grid-template-columns: 50vh 50vh;
     grid-template-rows: 30vh 30vh;
@@ -298,6 +288,66 @@ body {
     text-align: center;
 }
 
+.contact-page {
+    opacity: 0%;
+    position: absolute;
+    top: 400%;
+    background-color: #00bfe8;
+    width: 100%;
+    height: 100%;
+    animation: come 1s 3s forwards;
+}
+
+.contacts {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 6vh;
+    transform: translateX(-50%);
+    width: fit-content;
+    font-family: 'Poppins', sans-serif;
+}
+
+.cont {
+    color: #1f1f1f;
+}
+
+.contactlinks img{
+    width: 6vh;
+}
+
+.contactlinks {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translateX(-50%);
+    line-height: 4vh;
+    font-size: 2.5vh;
+    opacity: 0;
+    animation: come 1s 3s forwards;
+    text-align: center;
+}
+
+.tooltiptext {
+    position:relative;
+}
+
+.tooltiptext:before {
+    content: attr(data-text);
+    position:absolute;
+    padding: 1vh;
+    height: 4vh;
+    width:30vh;
+    border-radius:10px;
+    background:#1f1f1f;
+    color: #ffffff;
+    text-align:center;
+    display:none;
+}
+
+.tooltiptext:hover:before {
+    display:block;
+}
 
 /* Line Animation */
 
@@ -361,18 +411,37 @@ body {
     }
 }
 
-@keyframes designtxt {
+@keyframes designale {
     0% {
-        background: linear-gradient(145deg, rgba(1, 239, 211, 1) 0%, rgba(0, 172, 230, 1) 68%);
-        background-clip: text;
-        -webkit-background-clip: text;
         letter-spacing: 0vh;
+
+        
     }
     100% {
-        background: linear-gradient(145deg, rgba(1, 239, 211, 1) 0%, rgba(0, 172, 230, 1) 68%);
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+        letter-spacing: 0.3vh;
+        padding-left: 0.4vh;
+        padding-right: 0.4vh;
+    }
+}
+
+@keyframes undesignale {
+    0% {
+        letter-spacing: 0.3vh;
+        padding-left: 0.4vh;
+        padding-right: 0.4vh;
+    }
+    100% {
+        letter-spacing: 0vh;
+    }
+}
+
+@keyframes designtxt {
+    0% {
+        letter-spacing: 0vh;
+
+        
+    }
+    100% {
         letter-spacing: 0.3vh;
         padding-left: 0.4vh;
         padding-right: 0.4vh;
@@ -381,18 +450,11 @@ body {
 
 @keyframes undesigntxt {
     0% {
-        background: linear-gradient(145deg, rgba(1, 239, 211, 1) 0%, rgba(0, 172, 230, 1) 68%);
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
         letter-spacing: 0.3vh;
         padding-left: 0.4vh;
         padding-right: 0.4vh;
     }
     100% {
-        background: linear-gradient(145deg, rgba(1, 239, 211, 1) 0%, rgba(0, 172, 230, 1) 68%);
-        background-clip: text;
-        -webkit-background-clip: text;
         letter-spacing: 0vh;
     }
 }
@@ -506,26 +568,21 @@ body {
             width: 26vh;
         }
     }
-    /* Navigation Bar */
-    .navigation-bar {
-        left: -10%;
-        width: 6vh;
-        height: auto;
-    }
-    nav img {
-        height: 3vh;
-    }
-    nav ul {
-        padding: 1.5vh;
-    }
     /* Headings */
     .heytype,
     .work,
-    .projects {
+    .projects,
+    .contacts {
         top: 50%;
         left: 50%;
         font-size: 4vh;
         transform: translate(-50%, -50%);
+    }
+    .projects {
+        top: 40%;
+    }
+    button {
+        font-size: 4vh;
     }
     /* Body */
     .side-img {
@@ -552,8 +609,9 @@ body {
     }
     .start-div,
     .my-work,
-    .project-show {
-        top: 55%;
+    .project-show,
+    .contactlinks {
+        top: 60%;
         left: 50%;
         font-size: 2.5vh;
         line-height: 3vh;
@@ -561,8 +619,15 @@ body {
         text-align: start;
         width: 30vh;
     }
+
+    .contactlinks img {
+        width: 4vh;
+    }
     .project-show {
+        top: 45%;
         grid-template-areas: "project1" "project2";
+        grid-row-gap: 0vh;
+        grid-column-gap: 0vh;
     }
     .proj-div, .proj-div2{
         width: 30vh;
@@ -575,10 +640,7 @@ body {
         display: none;
     }
     .line-div1 {
-        top: 75%;
-    }
-    .line-div2 {
-        top: 130%;
+        top: 77%;
     }
     .scroll {
         top: 80%;
@@ -612,26 +674,21 @@ body {
             width: 26vh;
         }
     }
-    /* Navigation Bar */
-    .navigation-bar {
-        left: -10%;
-        width: 6vh;
-        height: auto;
-    }
-    nav img {
-        height: 3vh;
-    }
-    nav ul {
-        padding: 1.5vh;
-    }
     /* Headings */
     .heytype,
     .work,
-    .projects {
+    .projects,
+    .contacts {
         top: 50%;
         left: 50%;
         font-size: 4vh;
         transform: translate(-50%, -50%);
+    }
+    .projects {
+        top: 40%;
+    }
+    button {
+        font-size: 4vh;
     }
     /* Body */
     .side-img {
@@ -658,8 +715,9 @@ body {
     }
     .start-div,
     .my-work,
-    .project-show {
-        top: 55%;
+    .project-show,
+    .contactlinks {
+        top: 60%;
         left: 50%;
         font-size: 2.5vh;
         line-height: 3vh;
@@ -667,8 +725,15 @@ body {
         text-align: start;
         width: 30vh;
     }
+
+    .contactlinks img {
+        width: 4vh;
+    }
     .project-show {
+        top: 45%;
         grid-template-areas: "project1" "project2";
+        grid-row-gap: 0vh;
+        grid-column-gap: 0vh;
     }
     .proj-div, .proj-div2{
         width: 30vh;
@@ -681,7 +746,7 @@ body {
         display: none;
     }
     .line-div1 {
-        top: 75%;
+        top: 77%;
     }
     .scroll {
         top: 80%;

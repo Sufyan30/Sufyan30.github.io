@@ -12,30 +12,13 @@
 
 <body id="body">
 
-    <!-- Navigation Bar-->
-
-    <nav class="navigation-bar" id="nav">
-        <ul>
-            <li>
-                <a href="#hmp"><img src="https://media.discordapp.net/attachments/759730675447758862/939138502912794625/unknown.png" alt="Logo"></a>
-            </li>
-            <br>
-            <li>
-                <a href="mailto:alehyerr@gmail.com"><img src="https://media.discordapp.net/attachments/759730675447758862/939135104775782460/unknown.png" alt="Email"></a>
-            </li>
-            <br>
-            <li>
-                <a href="https://instagram.com/alehyer" target="_blank" rel="noopener noreferrer"><img src="https://media.discordapp.net/attachments/759730675447758862/939131831188611122/unknown.png" alt="Instagram"></a>
-            </li>
-        </ul>
-    </nav>
-
     <!-- Home -->
+
     <div id="bg"></div>
     <div class="home-page" id="hmp">
         <div class="heytype">
             Hi I'm
-            <b class="design-text" id="suf" onmouseover="hover(this.id)" onmouseout="unhover(this.id)">&lt;Sufyan/&gt;</b>
+            <button class="design-text" id="suf" onmouseover="hover(this.id)" onmouseout="unhover(this.id)"><b><span>&lt;Sufyan/&gt;</span></b></button>
         </div>
         <div class="start-div">
             &lt;I make cool <b class="design-text">websites</b>, <b class="design-text">designs</b>,
@@ -59,7 +42,7 @@
             My <b class="design-text" id="code" onmouseover="hover(this.id)" onmouseout="unhover(this.id)">&lt;Languages/&gt;</b>
         </div><br>
         <div class="my-work">
-            &lt;I speak in <b class="design-text">HTML</b>,<b class="design-text"> CSS</b>, <b class="design-text"> JS</b> and <b class="design-text">Python</b>. I'm currently learning <b class="design-text">kotlin</b>./&gt;
+            &lt;I speak in <b class="design-text">HTML</b>,<b class="design-text"> CSS</b>, <b class="design-text"> JS</b> and <b class="design-text">Python</b>. I'm currently learning <b class="design-text">Kotlin</b>./&gt;
         </div>
         <div>
             <img src="https://media.discordapp.net/attachments/759730675447758862/939143806794752010/unknown.png" class="side-img2" alt="Coding">
@@ -69,6 +52,7 @@
         <div class="line-div1"></div>
     </div>
 
+    <!-- My Projects -->
 
     <div class="project-page" id="prp">
         <div class="projects">
@@ -78,11 +62,29 @@
             <a href="https://todo-proj.netlify.app" class="proj-div">
                 <div class="content">This is a very basic ToDo list website and it was where I used JS for the first time.</div>
             </a>
-            <div class="proj-div2">More Coming Soon!</div>
+            <a class="proj-div2">More Coming Soon!</a>
         </div>
         <div>
             <img src="https://media.discordapp.net/attachments/759730675447758862/934320115393122324/unknown.png" class="side-img2" alt="Coding">
         </div>
+    </div>
+
+    <!--My contacts-->
+
+    <div class="contact-page" id="cop">
+        <img src="https://cdn.discordapp.com/attachments/759730675447758862/999287124211810364/send.png" class="side-img2" alt="Coding">
+        <div class="contacts">
+            Leave a <b class="cont" id="cont" onmouseover="hover(this.id)" onmouseout="unhover(this.id)">&lt;Message/&gt;</b>
+        </div><br>
+        <div class="contactlinks">
+            <a href="mailto:alehyer@gmail.com"><img src="https://cdn.discordapp.com/attachments/759730675447758862/999287125138747544/email.png" id="mail" onmouseover="hoverimg(this.id)" onmouseout="unhoverimg(this.id)"></a>
+            <span data-text="Click to copy!" class="tooltiptext"><img src="https://cdn.discordapp.com/attachments/759730675447758862/999287124840939540/discord.png" id="discord" onmouseover="hoverimg(this.id)" onmouseout="unhoverimg(this.id)" onclick="copydc()"></span>
+            <a href="https://instagram.com/alehyer"><img src="https://cdn.discordapp.com/attachments/759730675447758862/999287123863670844/instagram.png" id="insta" onmouseover="hoverimg(this.id)" onmouseout="unhoverimg(this.id)"></a>
+            <a href="https://github.com/alehyer"><img src="https://cdn.discordapp.com/attachments/759730675447758862/999287123565879377/github.png" id="github" onmouseover="hoverimg(this.id)" onmouseout="unhoverimg(this.id)"></a>
+            <a href="https://www.youtube.com/channel/UCEdRfOz0T_X5cpSdIt7qbMA"><img src="https://cdn.discordapp.com/attachments/759730675447758862/999287124543164426/youtube.png" id="yt" onmouseover="hoverimg(this.id)" onmouseout="unhoverimg(this.id)"></a>
+            <br><br><br><br><br> Thank You!
+        </div>
+
     </div>
 
     <script src="app.js"></script>
