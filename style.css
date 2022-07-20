@@ -614,10 +614,10 @@ body {
         top: 60%;
         left: 50%;
         font-size: 2.5vh;
-        line-height: 3vh;
+        line-height: 3.25vh;
         transform: translateX(-50%);
-        text-align: start;
-        width: 30vh;
+        text-align: center;
+        width: 35vh;
     }
 
     .contactlinks img {
@@ -643,6 +643,8 @@ body {
         top: 77%;
     }
     .scroll {
+        width: 100%;
+        text-align: center;
         top: 80%;
     }
 }
@@ -720,10 +722,10 @@ body {
         top: 60%;
         left: 50%;
         font-size: 2.5vh;
-        line-height: 3vh;
+        line-height: 3.25vh;
         transform: translateX(-50%);
-        text-align: start;
-        width: 30vh;
+        text-align: center;
+        width: 35vh;
     }
 
     .contactlinks img {
@@ -749,6 +751,8 @@ body {
         top: 77%;
     }
     .scroll {
+        width: 100%;
+        text-align: center;
         top: 80%;
     }
 }
