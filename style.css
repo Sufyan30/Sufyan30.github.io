@@ -16,12 +16,7 @@
     cursor: url("https://media.discordapp.net/attachments/759730675447758862/999131394229944421/unknown.png"), auto;
 }
 
-.design-text {
-    background: linear-gradient(145deg, rgba(1, 239, 211, 1) 0%, rgba(0, 172, 230, 1) 68%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
+
 
 button {
     font-family: 'Poppins', sans-serif;
@@ -48,42 +43,14 @@ a:visited{
 
 /* Scroll Bar*/
 
-
-/* width */
-
 ::-webkit-scrollbar {
-    width: 0.9vh;
-}
-
-
-/* Track */
-
-::-webkit-scrollbar-track {
-    background: rgba(0, 0, 0, 0);
-    border-radius: 10px;
-}
-
-
-/* Handle */
-
-::-webkit-scrollbar-thumb {
-    background: #00bfe8;
-    background: linear-gradient(180deg, #00bfe8 34%, #89fff1 74%);
-    width: 1.1vh;
-    border-radius: 10px;
-}
-
-
-/* Handle on hover */
-
-::-webkit-scrollbar-thumb:hover {
-    background: #00bfe8;
+    display: none;
 }
 
 
 /* Start-up Animation */
 
-.heytype {
+.welcomeAnimation {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -112,6 +79,8 @@ body {
     scroll-snap-type: y mandatory;
 }
 
+/* Pages */
+
 .home-page,
 .work-page,
 .project-page,
@@ -120,7 +89,52 @@ body {
     font-family: 'IBM Plex Mono', monospace;
 }
 
-.start-div {
+
+
+.work-page {
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 100%;
+    animation: come 1s 3s forwards;
+}
+
+.project-page {
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 200%;
+    top: 200%;
+    animation: come 1s 3s forwards;
+    background-image: url("./Images/wave-haikei.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.contact-page {
+    opacity: 0%;
+    position: absolute;
+    top: 400%;
+    background-color: #00bfe8;
+    width: 100%;
+    height: 100%;
+    animation: come 1s 3s forwards;
+}
+
+/* Text  */
+
+.header {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 6vh;
+    transform: translateX(-50%);
+    width: fit-content;
+    font-family: 'Poppins', sans-serif;
+}
+
+.text {
     position: absolute;
     top: 65%;
     left: 50%;
@@ -132,36 +146,11 @@ body {
     text-align: center;
 }
 
-.side-img {
-    position: absolute;
-    top: 30%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    height: 30vh;
-    width: 30vh;
-    border-radius: 30vh;
-    overflow: hidden;
-    animation: come 1s forwards, shadow-breathe 2.5s infinite;
-    box-shadow: 0 0 10vh #53dfff4d;
-}
-
-.side-img2 {
-    position: absolute;
-    top: 30%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    height: 30vh;
-    width: 30vh;
-    overflow-y: hidden;
-    animation: come 1s 3s forwards;
-}
-
-.my-img {
-    position: absolute;
-    bottom: 0%;
-    left: 50%;
-    transform: translateX(-50%);
-    height: 30vh;
+.textClr {
+    background: linear-gradient(145deg, #01efd3 0%, #00ace6 68%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .scroll {
@@ -175,72 +164,21 @@ body {
     animation: come 1s 3s forwards;
 }
 
-.arrow {
-    position: absolute;
-    font-size: 3vh;
-    top: 90%;
-    left: 50%;
-    opacity: 0;
-    transform: translateX(-50%);
-    animation: come 1s 3s forwards, arrow-down 2s infinite;
+/* Local adjustments */
+
+/* Project Page */
+
+.project-page .header {
+    top: 25%;
 }
 
-.work-page {
-    opacity: 0;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 100%;
-    animation: come 1s 3s forwards;
+.project-page .sideImg {
+    top: 15%;
 }
 
-.work {
+.projectGrid {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    font-size: 6vh;
-    transform: translateX(-50%);
-    width: fit-content;
-    font-family: 'Poppins', sans-serif;
-}
-
-.my-work {
-    position: absolute;
-    top: 65%;
-    left: 50%;
-    transform: translateX(-50%);
-    line-height: 4vh;
-    font-size: 2.5vh;
-    opacity: 0;
-    animation: come 1s 3s forwards;
-    text-align: center;
-}
-
-.project-page {
-    opacity: 0;
-    position: absolute;
-    width: 100%;
-    height: 160%;
-    top: 200%;
-    animation: come 1s 3s forwards;
-    background-image: url("./Images/wave-haikei.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.projects {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    font-size: 6vh;
-    transform: translateX(-50%);
-    width: fit-content;
-    font-family: 'Poppins', sans-serif;
-}
-
-.project-show {
-    position: absolute;
-    top: 50%;
+    top: 33%;
     left: 50%;
     display: grid;
     transform: translateX(-50%);
@@ -249,54 +187,58 @@ body {
     opacity: 0;
     animation: come 1s 3s forwards;
     text-align: center;
-    grid-template-columns: 50vh 50vh;
+    grid-template-columns: 0fr;
     grid-template-rows: 30vh 30vh;
     column-gap: 10vh;
-    row-gap: 10vh;
+    row-gap: 0vh;
     grid-template-areas: "project1 project2";
 }
 
-.proj-div {
-    border-radius: 5vh;
+.content {
+    padding: 1vh 3vh 1vh 3vh;
+    text-align: center;
+}
+
+.projDiv1, .projDiv2 {
+    border-radius: 4vh;
+    height: 60vh;
     width: 50vh;
-    background-size: cover;
-    background-image: url("https://media.discordapp.net/attachments/759730675447758862/939159082533814272/unknown.png");
+    background-color: #000000;
+    background-size: contain;
+    background-repeat: no-repeat;
+    box-shadow: 0 0 8vh #000000;
+}
+
+.projDiv1 {
     grid-area: project1;
 }
 
-.content {
-    display: none;
-    padding: 7vh;
-    text-align: center;
-}
-
-.proj-div:hover {
-    background: #191819;
-}
-
-.proj-div:hover .content {
-    display: block;
-}
-
-.proj-div2 {
-    border-radius: 5vh;
-    width: 50vh;
-    background-color: #191819;
-    background-size: cover;
+.projDiv2 {
     grid-area: project2;
-    padding: 10vh;
-    text-align: center;
 }
 
-.contact-page {
-    opacity: 0%;
-    position: absolute;
-    top: 360%;
-    background-color: #00bfe8;
-    width: 100%;
-    height: 100%;
-    animation: come 1s 3s forwards;
+.projImg {
+    padding: 3vh;
+    height: 30vh;
+    width: 50vh;
+    border-radius: 4vh;
 }
+
+.projCta {
+    position: relative;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    width: 40vh;
+    height: 4vh;
+    padding: 1vh 0vh 5vh 0vh;
+    text-align: center;
+    border-radius: 4vh;
+    background-color: #00bfe8;
+}
+
+/* Contact Page */
 
 .contacts {
     position: absolute;
@@ -312,20 +254,8 @@ body {
     color: #1f1f1f;
 }
 
-.contactlinks img{
-    width: 6vh;
-}
-
-.contactlinks {
-    position: absolute;
-    top: 65%;
-    left: 50%;
-    transform: translateX(-50%);
-    line-height: 4vh;
-    font-size: 2.5vh;
-    opacity: 0;
-    animation: come 1s 3s forwards;
-    text-align: center;
+.text img{
+    width: 5vh;
 }
 
 .tooltiptext {
@@ -335,10 +265,12 @@ body {
 .tooltiptext:before {
     content: attr(data-text);
     position:absolute;
+    top: 200%;
+    left: -190%;
     padding: 1vh;
     height: 4vh;
-    width:30vh;
-    border-radius:10px;
+    width: 25vh;
+    border-radius: 4vh;
     background:#1f1f1f;
     color: #ffffff;
     text-align:center;
@@ -349,9 +281,36 @@ body {
     display:block;
 }
 
-/* Line Animation */
+/* Images */
 
-.line-div1 {
+.sideImg {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 30vh;
+    width: 30vh;
+    overflow-y: hidden;
+    animation: come 1s 3s forwards;
+    filter: drop-shadow(0 0 10vh #53dfff);
+}
+
+.profileImg {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 30vh;
+    width: 30vh;
+    border-radius: 30vh;
+    overflow: hidden;
+    animation: come 1s forwards, shadow-breathe 2.5s infinite;
+    box-shadow: 0 0 10vh #53dfff;
+}
+
+/* Animated cta */
+
+.line-div {
     position: absolute;
     top: 80%;
     left: 50%;
@@ -361,16 +320,15 @@ body {
     animation: width-draw 2s 4s forwards, line-breathe 3s 6s infinite;
 }
 
-.line-div2 {
+.arrow {
     position: absolute;
-    top: 110%;
+    font-size: 3vh;
+    top: 90%;
     left: 50%;
-    transform: translatex(-50%);
-    border-top: 0.1vh solid #00bfe8;
-    width: 0vh;
-    animation: width-draw 2s 4s forwards, line-breathe 3s 6s infinite;
+    opacity: 0;
+    transform: translateX(-50%);
+    animation: come 1s 3s forwards, arrow-down 2s infinite;
 }
-
 
 /* Animations */
 
@@ -498,51 +456,13 @@ body {
     }
 }
 
-@keyframes menuopen {
-    from {
-        left: -10%;
-    }
-    to {
-        left: 0%;
-    }
-}
-
-@keyframes arrowopen {
-    from {
-        left: 0%;
-        rotate: 0deg;
-    }
-    to {
-        left: 4%;
-        rotate: 180deg;
-    }
-}
-
-@keyframes menuclose {
-    from {
-        left: 0%;
-    }
-    to {
-        left: -10%;
-    }
-}
-
-@keyframes arrowclose {
-    from {
-        left: 4%;
-        rotate: 180deg;
-    }
-    to {
-        left: 0%;
-        rotate: 0deg;
-    }
-}
-
 
 /* Media queries*/
 
 @media only screen and (max-width: 1100px) {
+
     /* Animations */
+    
     @keyframes typing {
         from {
             width: 0vh;
@@ -551,6 +471,7 @@ body {
             width: 32vh;
         }
     }
+    
     @keyframes width-draw {
         from {
             width: 0vh;
@@ -559,6 +480,7 @@ body {
             width: 30vh;
         }
     }
+    
     @keyframes line-breathe {
         from,
         to {
@@ -568,142 +490,33 @@ body {
             width: 26vh;
         }
     }
+    
     /* Headings */
-    .heytype,
-    .work,
-    .projects,
-    .contacts {
+    
+    .header, .welcomeAnimation {
         top: 50%;
         left: 50%;
         font-size: 4vh;
-        transform: translate(-50%, -50%);
-    }
-    .projects {
-        top: 40%;
-    }
-    button {
-        font-size: 4vh;
-    }
-    /* Body */
-    .side-img {
-        top: 25%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        height: 30vh;
-        border-radius: 30vh;
-        width: 30vh;
-        overflow: hidden;
-    }
-    .side-img2,
-    .side-img3 {
-        top: 27.5%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        height: 30vh;
-        width: 30vh;
-        overflow: hidden;
-    }
-    .my-img {
-        height: 30vh;
-        width: 30vh;
-    }
-    .start-div,
-    .my-work,
-    .project-show,
-    .contactlinks {
-        top: 60%;
-        left: 50%;
-        font-size: 2.5vh;
-        line-height: 3.25vh;
-        transform: translateX(-50%);
-        text-align: center;
-        width: 35vh;
-    }
-
-    .contactlinks img {
-        width: 4vh;
-    }
-    .project-show {
-        top: 45%;
-        grid-template-areas: "project1" "project2";
-        grid-row-gap: 0vh;
-        grid-column-gap: 0vh;
-    }
-    .proj-div, .proj-div2{
-        width: 30vh;
-        height: 15vh;
-    }
-    .proj-div2 {
-        padding: 4vh;
-    }
-    .proj-div:hover .content {
-        display: none;
-    }
-    .line-div1 {
-        top: 77%;
-    }
-    .scroll {
         width: 100%;
         text-align: center;
-        top: 80%;
-    }
-}
-
-@media only screen and (orientation: portrait) {
-    /* Animations */
-    @keyframes typing {
-        from {
-            width: 0vh;
-        }
-        to {
-            width: 32vh;
-        }
-    }
-    @keyframes width-draw {
-        from {
-            width: 0vh;
-        }
-        to {
-            width: 30vh;
-        }
-    }
-    @keyframes line-breathe {
-        from,
-        to {
-            width: 30vh;
-        }
-        50% {
-            width: 26vh;
-        }
-    }
-    /* Headings */
-    .heytype,
-    .work,
-    .projects,
-    .contacts {
-        top: 50%;
-        left: 50%;
-        font-size: 4vh;
         transform: translate(-50%, -50%);
     }
+    
+    .welcomeAnimation {
+        top: 53%;
+    }
+
     .projects {
         top: 40%;
     }
+    
     button {
         font-size: 4vh;
     }
+
     /* Body */
-    .side-img {
-        top: 25%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        height: 30vh;
-        border-radius: 30vh;
-        width: 30vh;
-        overflow: hidden;
-    }
-    .side-img2,
-    .side-img3 {
+
+    .sideImg {
         top: 27.5%;
         left: 50%;
         transform: translate(-50%, -50%);
@@ -711,14 +524,13 @@ body {
         width: 30vh;
         overflow: hidden;
     }
-    .my-img {
+
+    .profileImg {
         height: 30vh;
         width: 30vh;
     }
-    .start-div,
-    .my-work,
-    .project-show,
-    .contactlinks {
+
+    .text {
         top: 60%;
         left: 50%;
         font-size: 2.5vh;
@@ -731,25 +543,35 @@ body {
     .contactlinks img {
         width: 4vh;
     }
-    .project-show {
-        top: 45%;
+
+    .projectGrid {
+        left: 50%;
+        transform: translateX(-50%);
+        top: 30%;
         grid-template-areas: "project1" "project2";
-        grid-row-gap: 0vh;
-        grid-column-gap: 0vh;
+        grid-template-columns: 0fr;
+        grid-template-rows: 70vh 35vh;
     }
-    .proj-div, .proj-div2{
-        width: 30vh;
-        height: 15vh;
+    
+    .projDiv1, .projDiv2 {
+        height: 50vh;
+        width: 38vh;
     }
-    .proj-div2 {
-        padding: 4vh;
+
+    .projImg {
+        width: 37vh;
+        height: 24vh;
     }
-    .proj-div:hover .content {
-        display: none;
+
+    .projCta {
+        width: 34vh;
+
     }
-    .line-div1 {
+
+    .line-div {
         top: 77%;
     }
+    
     .scroll {
         width: 100%;
         text-align: center;

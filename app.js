@@ -13,8 +13,3 @@ function hoverimg(hoverid) {
 function unhoverimg(hoverid) {
     document.getElementById(hoverid).style.animation = 'undesigntxt 0.35s forwards';
 };
-
-function copydc() {
-    alert("Copied!");
-    navigator.clipboard.writeText("alehyer#3767");
-};
