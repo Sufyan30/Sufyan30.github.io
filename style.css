@@ -7,6 +7,71 @@
 
 /* Entire Html */
 
+
+/* Body */
+
+.sideImg {
+    top: 27.5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 30vh;
+    width: 30vh;
+    overflow: hidden;
+}
+
+.profileImg {
+    height: 30vh;
+    width: 30vh;
+}
+
+.text {
+    top: 60%;
+    left: 50%;
+    font-size: 2.5vh;
+    line-height: 3.25vh;
+    transform: translateX(-50%);
+    text-align: center;
+    width: 35vh;
+}
+
+.contactlinks img {
+    width: 4vh;
+}
+
+.projectGrid {
+    left: 50%;
+    transform: translateX(-50%);
+    top: 30%;
+    grid-template-areas: "project1" "project2";
+    grid-template-columns: 0fr;
+    grid-template-rows: 70vh 35vh;
+}
+
+.projDiv1, .projDiv2 {
+    height: 50vh;
+    width: 38vh;
+}
+
+.projImg {
+    width: 37vh;
+    height: 24vh;
+}
+
+.projCta {
+    width: 34vh;
+
+}
+
+.line-div {
+    top: 77%;
+}
+
+.scroll {
+    width: 100%;
+    text-align: center;
+    top: 80%;
+}
+
 * {
     user-select: none;
     padding: 0;
@@ -21,13 +86,13 @@
 button {
     font-family: 'Poppins', sans-serif;
     border: none;
-    font-size: 6vh;
+    font-size: 4vh;
 }
 
 button:hover span {
     display: none
 }
-  
+
 button:hover:before {
     font-weight: bold;
     content: "<alehyer/>"
@@ -51,11 +116,13 @@ a:visited{
 /* Start-up Animation */
 
 .welcomeAnimation {
-    position: absolute;
-    top: 50%;
+    top: 53%;
     left: 50%;
-    font-size: 6vh;
-    transform: translateX(-50%);
+    font-size: 4vh;
+    width: 100%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    position: absolute;
     overflow: hidden;
     white-space: nowrap;
     border-right: 0.1vh solid;
@@ -125,12 +192,13 @@ body {
 /* Text  */
 
 .header {
-    position: absolute;
     top: 50%;
     left: 50%;
-    font-size: 6vh;
-    transform: translateX(-50%);
-    width: fit-content;
+    font-size: 4vh;
+    width: 100%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    position: absolute;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -337,7 +405,7 @@ body {
         width: 0vh;
     }
     to {
-        width: 48vh;
+        width: 32vh;
     }
 }
 
@@ -432,17 +500,17 @@ body {
         width: 0vh;
     }
     to {
-        width: 40vh;
+        width: 30vh;
     }
 }
 
 @keyframes line-breathe {
     from,
     to {
-        width: 40vh;
+        width: 30vh;
     }
     50% {
-        width: 36vh;
+        width: 26vh;
     }
 }
 
@@ -459,122 +527,453 @@ body {
 
 /* Media queries*/
 
-@media only screen and (max-width: 1100px) {
+@media only screen and (min-width: 1100px) {
+    * {
+        user-select: none;
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        scroll-behavior: smooth;
+        cursor: url("https://media.discordapp.net/attachments/759730675447758862/999131394229944421/unknown.png"), auto;
+    }
+
+
+
+    button {
+        font-family: 'Poppins', sans-serif;
+        border: none;
+        font-size: 6vh;
+    }
+
+    button:hover span {
+        display: none
+    }
+    
+    button:hover:before {
+        font-weight: bold;
+        content: "<alehyer/>"
+    }
+
+    a:link {
+        text-decoration: none;
+    }
+
+    a:visited{
+        color: white;
+    }
+
+    /* Scroll Bar*/
+
+    ::-webkit-scrollbar {
+        display: none;
+    }
+
+
+    /* Start-up Animation */
+
+    .welcomeAnimation {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        font-size: 6vh;
+        transform: translateX(-50%);
+        overflow: hidden;
+        white-space: nowrap;
+        border-right: 0.1vh solid;
+        padding-right: 5px;
+        letter-spacing: 0em;
+        animation: typing 3s steps(40, end), cursor 0.65s infinite;
+        user-select: none;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    /* Body */
+
+    body {
+        width: 100%;
+        height: 100%;
+        color: rgb(255, 255, 255);
+        background-color: #1f1f1f;
+        font-family: 'Poppins', sans-serif;
+        font-size: 22px;
+        scroll-behavior: smooth;
+        scroll-snap-type: y mandatory;
+    }
+
+    /* Pages */
+
+    .home-page,
+    .work-page,
+    .project-page,
+    .contact-page {
+        scroll-snap-align: top;
+        font-family: 'IBM Plex Mono', monospace;
+    }
+
+
+
+    .work-page {
+        opacity: 0;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 100%;
+        animation: come 1s 3s forwards;
+    }
+
+    .project-page {
+        opacity: 0;
+        position: absolute;
+        width: 100%;
+        height: 200%;
+        top: 200%;
+        animation: come 1s 3s forwards;
+        background-image: url("./Images/wave-haikei.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .contact-page {
+        opacity: 0%;
+        position: absolute;
+        top: 400%;
+        background-color: #00bfe8;
+        width: 100%;
+        height: 100%;
+        animation: come 1s 3s forwards;
+    }
+
+    /* Text  */
+
+    .header {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        font-size: 6vh;
+        transform: translateX(-50%);
+        width: fit-content;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .text {
+        position: absolute;
+        top: 65%;
+        left: 50%;
+        transform: translateX(-50%);
+        line-height: 4vh;
+        font-size: 2.5vh;
+        opacity: 0;
+        animation: come 1.5s 3s forwards;
+        text-align: center;
+    }
+
+    .textClr {
+        background: linear-gradient(145deg, #01efd3 0%, #00ace6 68%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .scroll {
+        color: #00bfe8;
+        position: absolute;
+        font-size: 3vh;
+        top: 85%;
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: 0;
+        animation: come 1s 3s forwards;
+    }
+
+    /* Local adjustments */
+
+    /* Project Page */
+
+    .project-page .header {
+        top: 25%;
+    }
+
+    .project-page .sideImg {
+        top: 15%;
+    }
+
+    .projectGrid {
+        position: absolute;
+        top: 33%;
+        left: 50%;
+        display: grid;
+        transform: translateX(-50%);
+        line-height: 4vh;
+        font-size: 2.5vh;
+        opacity: 0;
+        animation: come 1s 3s forwards;
+        text-align: center;
+        grid-template-columns: 0fr;
+        grid-template-rows: 30vh 30vh;
+        column-gap: 10vh;
+        row-gap: 0vh;
+        grid-template-areas: "project1 project2";
+    }
+
+    .content {
+        padding: 1vh 3vh 1vh 3vh;
+        text-align: center;
+    }
+
+    .projDiv1, .projDiv2 {
+        border-radius: 4vh;
+        height: 60vh;
+        width: 50vh;
+        background-color: #000000;
+        background-size: contain;
+        background-repeat: no-repeat;
+        box-shadow: 0 0 8vh #000000;
+    }
+
+    .projDiv1 {
+        grid-area: project1;
+    }
+
+    .projDiv2 {
+        grid-area: project2;
+    }
+
+    .projImg {
+        padding: 3vh;
+        height: 30vh;
+        width: 50vh;
+        border-radius: 4vh;
+    }
+
+    .projCta {
+        position: relative;
+        top: 5%;
+        left: 50%;
+        transform: translateX(-50%);
+        color: white;
+        width: 40vh;
+        height: 4vh;
+        padding: 1vh 0vh 5vh 0vh;
+        text-align: center;
+        border-radius: 4vh;
+        background-color: #00bfe8;
+    }
+
+    /* Contact Page */
+
+    .contacts {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        font-size: 6vh;
+        transform: translateX(-50%);
+        width: fit-content;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .cont {
+        color: #1f1f1f;
+    }
+
+    .text img{
+        width: 5vh;
+    }
+
+    .tooltiptext {
+        position:relative;
+    }
+
+    .tooltiptext:before {
+        content: attr(data-text);
+        position:absolute;
+        top: 200%;
+        left: -190%;
+        padding: 1vh;
+        height: 4vh;
+        width: 25vh;
+        border-radius: 4vh;
+        background:#1f1f1f;
+        color: #ffffff;
+        text-align:center;
+        display:none;
+    }
+
+    .tooltiptext:hover:before {
+        display:block;
+    }
+
+    /* Images */
+
+    .sideImg {
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 30vh;
+        width: 30vh;
+        overflow-y: hidden;
+        animation: come 1s 3s forwards;
+        filter: drop-shadow(0 0 10vh #53dfff);
+    }
+
+    .profileImg {
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 30vh;
+        width: 30vh;
+        border-radius: 30vh;
+        overflow: hidden;
+        animation: come 1s forwards, shadow-breathe 2.5s infinite;
+        box-shadow: 0 0 10vh #53dfff;
+    }
+
+    /* Animated cta */
+
+    .line-div {
+        position: absolute;
+        top: 80%;
+        left: 50%;
+        transform: translatex(-50%);
+        border-top: 0.1vh solid #00bfe8;
+        width: 0vh;
+        animation: width-draw 2s 4s forwards, line-breathe 3s 6s infinite;
+    }
+
+    .arrow {
+        position: absolute;
+        font-size: 3vh;
+        top: 90%;
+        left: 50%;
+        opacity: 0;
+        transform: translateX(-50%);
+        animation: come 1s 3s forwards, arrow-down 2s infinite;
+    }
 
     /* Animations */
-    
+
     @keyframes typing {
         from {
             width: 0vh;
         }
         to {
-            width: 32vh;
+            width: 48vh;
         }
     }
-    
+
+    @keyframes cursor {
+        from,
+        to {
+            border-color: transparent;
+        }
+        50% {
+            border-color: #00bfe8;
+        }
+    }
+
+    @keyframes come {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 100%;
+        }
+    }
+
+    @keyframes go {
+        from {
+            opacity: 100%;
+        }
+        to {
+            opacity: 0;
+        }
+    }
+
+    @keyframes designale {
+        0% {
+            letter-spacing: 0vh;
+
+            
+        }
+        100% {
+            letter-spacing: 0.3vh;
+            padding-left: 0.4vh;
+            padding-right: 0.4vh;
+        }
+    }
+
+    @keyframes undesignale {
+        0% {
+            letter-spacing: 0.3vh;
+            padding-left: 0.4vh;
+            padding-right: 0.4vh;
+        }
+        100% {
+            letter-spacing: 0vh;
+        }
+    }
+
+    @keyframes designtxt {
+        0% {
+            letter-spacing: 0vh;
+
+            
+        }
+        100% {
+            letter-spacing: 0.3vh;
+            padding-left: 0.4vh;
+            padding-right: 0.4vh;
+        }
+    }
+
+    @keyframes undesigntxt {
+        0% {
+            letter-spacing: 0.3vh;
+            padding-left: 0.4vh;
+            padding-right: 0.4vh;
+        }
+        100% {
+            letter-spacing: 0vh;
+        }
+    }
+
+    @keyframes arrow-down {
+        0%,
+        100% {
+            top: 89%;
+        }
+        50% {
+            top: 93%;
+        }
+    }
+
     @keyframes width-draw {
         from {
             width: 0vh;
         }
         to {
-            width: 30vh;
+            width: 40vh;
         }
     }
-    
+
     @keyframes line-breathe {
         from,
         to {
-            width: 30vh;
+            width: 40vh;
         }
         50% {
-            width: 26vh;
+            width: 36vh;
         }
     }
-    
-    /* Headings */
-    
-    .header, .welcomeAnimation {
-        top: 50%;
-        left: 50%;
-        font-size: 4vh;
-        width: 100%;
-        text-align: center;
-        transform: translate(-50%, -50%);
-    }
-    
-    .welcomeAnimation {
-        top: 53%;
-    }
 
-    .projects {
-        top: 40%;
-    }
-    
-    button {
-        font-size: 4vh;
-    }
-
-    /* Body */
-
-    .sideImg {
-        top: 27.5%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        height: 30vh;
-        width: 30vh;
-        overflow: hidden;
-    }
-
-    .profileImg {
-        height: 30vh;
-        width: 30vh;
-    }
-
-    .text {
-        top: 60%;
-        left: 50%;
-        font-size: 2.5vh;
-        line-height: 3.25vh;
-        transform: translateX(-50%);
-        text-align: center;
-        width: 35vh;
-    }
-
-    .contactlinks img {
-        width: 4vh;
-    }
-
-    .projectGrid {
-        left: 50%;
-        transform: translateX(-50%);
-        top: 30%;
-        grid-template-areas: "project1" "project2";
-        grid-template-columns: 0fr;
-        grid-template-rows: 70vh 35vh;
-    }
-    
-    .projDiv1, .projDiv2 {
-        height: 50vh;
-        width: 38vh;
-    }
-
-    .projImg {
-        width: 37vh;
-        height: 24vh;
-    }
-
-    .projCta {
-        width: 34vh;
-
-    }
-
-    .line-div {
-        top: 77%;
-    }
-    
-    .scroll {
-        width: 100%;
-        text-align: center;
-        top: 80%;
+    @keyframes shadow-breathe {
+        from,
+        to {
+            box-shadow: 0 0 10vh #53dfff4d;
+        }
+        50% {
+            box-shadow: 0 0 20vh #53dfff4d;
+        }
     }
 }
