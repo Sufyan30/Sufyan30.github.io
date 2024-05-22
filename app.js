@@ -1,3 +1,5 @@
+alert("This website is undergoing renovation and is currently broken.");
+
 function hover(hoverid) {
     document.getElementById(hoverid).style.animation = 'designtxt 0.35s forwards';
 };
