@@ -1,3 +1,3 @@
-## 👋 | Hey there, I am Sofian.
-## 📖 | Software Engineering student.
-## 🧩 | I like making things.
+### 👋 | Hey there, I am Sofian.
+### 📖 | I am a Software Engineering student.
+### 🧩 | I like making things.
